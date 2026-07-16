@@ -1,6 +1,6 @@
 cask "zptah" do
-  version "0.20.0"
-  sha256  "9027eb3526aade879764bf95fd09ce99275e26173e930ec7f1430affa1b08998"
+  version "0.20.1"
+  sha256  "61a59853e5d341895493be5025cf12df3233e93bf10861d1013432a2a0206a80"
 
   url "https://github.com/hhoangg/homebrew-zptah/releases/download/v#{version}/zptah.app.zip"
   name "zptah"

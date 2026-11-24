@@ -1,20 +1,21 @@
 cask "zptah" do
-  version "6.0.1"
-  sha256  "4b6ed3bd01dccc40fec742202d7175a4b828edb4ccebf853cda4db2dc2edfcac"
+  version "0.1.0"
+  sha256 "1be0db93163126099311b7ea25bc1fd39346400f5e859beab8e927c4ec499e6d"
 
-  url "https://github.com/hhoangg/homebrew-zptah/releases/download/v#{version}/zptah.app.zip"
+  url "https://github.com/hhoangg/zptah/releases/download/native-v#{version}/zptah_#{version}_aarch64.zip"
   name "zptah"
-  desc "Native macOS SwiftUI terminal + AI-agent session manager"
-  homepage "https://github.com/hhoangg/homebrew-zptah"
+  desc "One UI for every agent harness"
+  homepage "https://zptah.app"
 
-  app "zptah.app"
-
-  # Self-signed (no Apple Developer ID): strip the quarantine flag so Gatekeeper
-  # lets it launch without a right-click-open dance.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/zptah.app"]
+  livecheck do
+    url "https://github.com/hhoangg/zptah/releases"
+    regex(/^native-v(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
   end
 
-  zap trash: ["~/.zptah"]
+  auto_updates true
+  depends_on arch: :arm64
+  depends_on :macos
+
+  app "zptah.app"
 end

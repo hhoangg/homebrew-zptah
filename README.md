@@ -1,16 +1,17 @@
 # homebrew-zptah
 
-Homebrew tap for **zptah** — a native macOS SwiftUI terminal + AI-agent session manager.
+Homebrew tap for [zptah](https://github.com/hhoangg/zptah), a desktop app for running and managing your AI coding agent sessions. Apple Silicon only.
 
 ```sh
-brew tap hhoangg/zptah
-brew install --cask zptah
+brew install --cask hhoangg/zptah/zptah
 ```
 
-Upgrade later:
+zptah updates itself. To upgrade through Homebrew instead:
 
 ```sh
 brew update && brew upgrade --cask zptah
 ```
 
-Releases here host the built `.app` zips; the source lives in a separate private repo.
+The first launch is blocked by macOS because the app is signed with a self-signed certificate and not notarized. Open System Settings > Privacy & Security and choose "Open Anyway" next to zptah.
+
+The cask downloads the app from [hhoangg/zptah releases](https://github.com/hhoangg/zptah/releases). Linux and Windows builds are there too.

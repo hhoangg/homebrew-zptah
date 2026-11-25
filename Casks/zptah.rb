@@ -1,6 +1,6 @@
 cask "zptah" do
-  version "0.1.0"
-  sha256 "1be0db93163126099311b7ea25bc1fd39346400f5e859beab8e927c4ec499e6d"
+  version "0.1.1"
+  sha256 "e3bdc0d0c4ba925f773b9e7c5ae27a8807e01c26e8b594ab2a41900302f93be1"
 
   url "https://github.com/hhoangg/zptah/releases/download/native-v#{version}/zptah_#{version}_aarch64.zip"
   name "zptah"
